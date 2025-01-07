@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 상단 검색 바 -->
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <!-- 검색 아이콘 -->
+        <ImageView
+            android:id="@+id/iconSearch"
+            android:layout_width="24dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search" />
+
+        <!-- 텍스트 표시 -->
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/iconSearch"
+            android:text="경기도 안양시 만안구 성결대학교 53"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <!-- 설정 아이콘 -->
+        <ImageView
+            android:id="@+id/iconSettings"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="설정"
+            android:onClick="onclick"
+            android:src="@drawable/settings" />
+    </RelativeLayout>
+
+    <!-- 콘텐츠 영역 -->
+    <LinearLayout
+        android:id="@+id/contentArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/topbar"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/recentimage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/ic_logo" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <!-- 하단 네비게이션 바 -->
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#17ff0b"
+        android:orientation="horizontal">
+
+        <!-- 카메라 아이콘 -->
+        <ImageButton
+            android:id="@+id/cameraButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#17ff0b"
+            android:contentDescription="Camera"
+            android:src="@drawable/camera" />
+
+        <!-- 갤러리 아이콘 -->
+        <ImageButton
+            android:id="@+id/galleryButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#17ff0b"
+            android:contentDescription="Gallery"
+            android:src="@drawable/image" />
+    </LinearLayout>
+</RelativeLayout>

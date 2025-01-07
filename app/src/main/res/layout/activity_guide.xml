@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".guide">
+
+    <ImageView
+        android:id="@+id/scanimage"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/recycleguide"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@id/scanimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="우유 팩은 속을 깨끗이 한 다음 말려서 펼쳐진 상태로 배출" />
+
+    <Button
+        android:id="@+id/video"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/recycleguide"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#17ff0b"
+        android:gravity="center"
+        android:onClick="video"
+        android:text="동영상으로 보기" />
+
+    <ImageButton
+        android:id="@+id/homebutton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/video"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#17ff0b"
+        app:srcCompat="@drawable/home"
+        android:contentDescription="홈 화면으로 이동" />
+</RelativeLayout>
